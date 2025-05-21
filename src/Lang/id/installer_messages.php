@@ -4,74 +4,74 @@ return [
 
     /*
      *
-     * Shared translations.
+     * Terjemahan umum.
      *
      */
-    'title' => 'Laravel Installer',
-    'next' => 'Selanjutnya',
-    'back' => 'Kembali',
+    'title' => 'Selamat Datang di Installer Aplikasi',
+    'next' => 'Langkah Selanjutnya',
+    'back' => 'Sebelumnya',
     'finish' => 'Pasang',
     'forms' => [
-        'errorTitle' => 'Terjadi galat sebagai berikut:',
+        'errorTitle' => 'Terjadi beberapa kesalahan berikut:',
     ],
 
     /*
      *
-     * Home page translations.
+     * Terjemahan halaman utama.
      *
      */
     'welcome' => [
         'templateTitle' => 'Selamat Datang',
-        'title'   => 'Laravel Installer',
-        'message' => 'Instalasi Mudah dan Persiapan Aplikasi',
-        'next'    => 'Cek Kebutuhan',
+        'title' => 'Selamat Datang di Installer Aplikasi',
+        'message' => 'Instalasi dan Pengaturan Mudah.',
+        'next' => 'Cek Persyaratan',
     ],
 
     /*
      *
-     * Requirements page translations.
+     * Terjemahan halaman persyaratan.
      *
      */
     'requirements' => [
-        'templateTitle' => 'Langkah 1 | Kebutuhan Server',
-        'title' => 'Kebutuhan Server',
-        'next'    => 'Cek Hak Akses',
+        'templateTitle' => 'Langkah 1 | Persyaratan Server',
+        'title' => 'Persyaratan Server',
+        'next' => 'Cek Izin Folder',
     ],
 
     /*
      *
-     * Permissions page translations.
+     * Terjemahan halaman izin folder.
      *
      */
     'permissions' => [
-        'templateTitle' => 'Langkah 2 | Hak Akses',
-        'title' => 'Hak Akses',
-        'next' => 'Konfigurasi Lingkungan',
+        'templateTitle' => 'Langkah 2 | Izin Folder',
+        'title' => 'Izin Folder',
+        'next' => 'Atur Lingkungan',
     ],
 
     /*
      *
-     * Environment page translations.
+     * Terjemahan halaman lingkungan.
      *
      */
     'environment' => [
         'menu' => [
-            'templateTitle' => 'Langkah 3 | Penyetelan Lingkungan',
-            'title' => 'Penyetelan Lingkungan',
-            'desc' => 'Silahkan pilih bagaimana Anda akan mengkofigurasi berkas <code>.env</code> aplikasi.',
-            'wizard-button' => 'Form Penyetelan Wizard',
-            'classic-button' => 'Classic Text Editor',
+            'templateTitle' => 'Langkah 3 | Pengaturan Lingkungan',
+            'title' => 'Pengaturan Lingkungan',
+            'desc' => 'Silakan pilih cara Anda ingin mengatur file <code>.env</code> aplikasi.',
+            'wizard-button' => 'Pengaturan Form Wizard',
+            'classic-button' => 'Editor Teks Klasik',
         ],
         'wizard' => [
-            'templateTitle' => 'Langkah 3 | Penyetelan Lingkungan | Wizard Terpandu',
-            'title' => 'Wizard <code>.env</code> Terpandu',
+            'templateTitle' => 'Langkah 3 | Pengaturan Lingkungan | Panduan Wizard',
+            'title' => 'Panduan <code>.env</code> Wizard',
             'tabs' => [
                 'environment' => 'Lingkungan',
-                'database' => 'Basis Data',
+                'database' => 'Database',
                 'application' => 'Aplikasi',
             ],
             'form' => [
-                'name_required' => 'Lingkungan aplikasi harus ditetapkan',
+                'name_required' => 'Nama lingkungan wajib diisi.',
                 'app_name_label' => 'Nama Aplikasi',
                 'app_name_placeholder' => 'Nama Aplikasi',
                 'app_environment_label' => 'Lingkungan Aplikasi',
@@ -80,38 +80,39 @@ return [
                 'app_environment_label_testing' => 'Pengujian',
                 'app_environment_label_production' => 'Produksi',
                 'app_environment_label_other' => 'Lainnya',
-                'app_environment_placeholder_other' => 'Masukan lingkungan...',
+                'app_environment_placeholder_other' => 'Masukkan lingkungan Anda...',
                 'app_debug_label' => 'Debug Aplikasi',
-                'app_debug_label_true' => 'Iya',
+                'app_debug_label_true' => 'Ya',
                 'app_debug_label_false' => 'Tidak',
                 'app_demo_label' => 'Demo Aplikasi',
-                'app_demo_label_true' => 'Iya',
+                'app_demo_label_true' => 'Ya',
                 'app_demo_label_false' => 'Tidak',
                 'app_url_label' => 'URL Aplikasi',
                 'app_url_placeholder' => 'URL Aplikasi',
-                'db_connection_label' => 'Koneksi Basis Data',
+                'db_connection_failed' => 'Tidak dapat terhubung ke database.',
+                'db_connection_label' => 'Koneksi Database',
                 'db_connection_label_mysql' => 'mysql',
                 'db_connection_label_sqlite' => 'sqlite',
                 'db_connection_label_pgsql' => 'pgsql',
                 'db_connection_label_sqlsrv' => 'sqlsrv',
-                'db_host_label' => 'Host Basis Data',
-                'db_host_placeholder' => 'Host Basis Data',
-                'db_port_label' => 'Port Basis Data',
-                'db_port_placeholder' => 'Port Basis Data',
-                'db_name_label' => 'Nama Basis Data',
-                'db_name_placeholder' => 'Nama Basis Data',
-                'db_username_label' => 'Pengguna Basis Data',
-                'db_username_placeholder' => 'Pengguna Basis Data',
-                'db_password_label' => 'Kata Sandi Basis Data',
-                'db_password_placeholder' => 'Kata Sandi Basis Data',
+                'db_host_label' => 'Host Database',
+                'db_host_placeholder' => 'Host Database',
+                'db_port_label' => 'Port Database',
+                'db_port_placeholder' => 'Port Database',
+                'db_name_label' => 'Nama Database',
+                'db_name_placeholder' => 'Nama Database',
+                'db_username_label' => 'Username Database',
+                'db_username_placeholder' => 'Username Database',
+                'db_password_label' => 'Password Database',
+                'db_password_placeholder' => 'Password Database',
                 'app_timezone_label' => 'Zona Waktu Aplikasi',
-                'app_timezone_label_utc' => 'UTC (Zona Waktu Universal Terkoordinasi)',
+                'app_timezone_label_utc' => 'UTC (Waktu Universal Terkoordinasi)',
                 'app_timezone_label_wib' => 'Asia/Jakarta',
                 'app_timezone_label_wita' => 'Asia/Makassar',
                 'app_timezone_label_wit' => 'Asia/Jayapura',
 
                 'env_tabs' => [
-                    'more_info' => 'Informasi Lainnya',
+                    'more_info' => 'Info Lainnya',
                     'env_tabs_title' => 'Variabel Lingkungan Tambahan',
                     'locale_label' => 'Bahasa Aplikasi',
                     'locale_placeholder' => 'Bahasa Aplikasi',
@@ -119,34 +120,34 @@ return [
                     'app_locale_id_placeholder' => 'Bahasa Indonesia',
                     'app_locale_en_label' => 'Bahasa Inggris',
                     'app_locale_en_placeholder' => 'Bahasa Inggris',
-                    'fallback_locale_label' => 'Bahasa Aplikasi',
-                    'fallback_locale_placeholder' => 'Bahasa Aplikasi',
+                    'fallback_locale_label' => 'Fallback Bahasa',
+                    'fallback_locale_placeholder' => 'Fallback Bahasa',
                     'app_fallback_locale_id_label' => 'Bahasa Indonesia',
                     'app_fallback_locale_id_placeholder' => 'Bahasa Indonesia',
                     'app_fallback_locale_en_label' => 'Bahasa Inggris',
                     'app_fallback_locale_en_placeholder' => 'Bahasa Inggris',
-                    'faker_locale_label' => 'Bahasa Faker Aplikasi',
-                    'faker_locale_placeholder' => 'Bahasa Faker Aplikasi',
+                    'faker_locale_label' => 'Bahasa Faker',
+                    'faker_locale_placeholder' => 'Bahasa Faker',
                     'app_faker_locale_id_label' => 'Bahasa Indonesia',
                     'app_faker_locale_id_placeholder' => 'Bahasa Indonesia',
                     'app_faker_locale_en_label' => 'Bahasa Inggris',
                     'app_faker_locale_en_placeholder' => 'Bahasa Inggris',
-                    'maintenance_driver_label' => 'Driver Mode Pemeliharaan',
+                    'maintenance_driver_label' => 'Driver Maintenance',
                     'maintenance_driver_placeholder' => 'File',
-                    'maintenance_store_label' => 'Penyimpanan Mode Pemeliharaan',
-                    'maintenance_store_placeholder' => 'Basis Data',
-                    'maintenance_option_label' => 'Mode Pemeliharaan Aplikasi',
-                    'maintenance_option_placeholder' => 'Mode Pemeliharaan Aplikasi',
-                    'bcrypt_rounds_label' => 'Jumlah Putaran Bcrypt',
-                    'bcrypt_rounds_placeholder' => 'Jumlah Putaran Bcrypt',
-                    'log_channel_label' => 'Saluran Log',
-                    'log_channel_placeholder' => 'Saluran Log',
+                    'maintenance_store_label' => 'Penyimpanan Maintenance',
+                    'maintenance_store_placeholder' => 'Database',
+                    'maintenance_option_label' => 'Mode Maintenance',
+                    'maintenance_option_placeholder' => 'Mode Maintenance',
+                    'bcrypt_rounds_label' => 'Bcrypt Rounds',
+                    'bcrypt_rounds_placeholder' => 'Bcrypt Rounds',
+                    'log_channel_label' => 'Channel Log',
+                    'log_channel_placeholder' => 'Channel Log',
                     'log_stack_label' => 'Stack Log',
                     'log_stack_placeholder' => 'Stack Log',
-                    'log_deprecations_channel_label' => 'Saluran Log Depresiasi',
-                    'log_deprecations_channel_placeholder' => 'Saluran Log Depresiasi',
-                    'log_level_label' => 'Tingkat Log',
-                    'log_level_placeholder' => 'Tingkat Log',
+                    'log_deprecations_channel_label' => 'Channel Log Deprecation',
+                    'log_deprecations_channel_placeholder' => 'Channel Log Deprecation',
+                    'log_level_label' => 'Level Log',
+                    'log_level_placeholder' => 'Level Log',
                 ],
 
                 'app_tabs' => [
@@ -154,8 +155,8 @@ return [
                     'session_title' => 'Sesi',
                     'session_label' => 'Driver Sesi',
                     'session_placeholder' => 'Driver Sesi',
-                    'session_lifetime_label' => 'Waktu Aktif Sesi',
-                    'session_lifetime_placeholder' => 'Waktu Aktif Sesi',
+                    'session_lifetime_label' => 'Waktu Hidup Sesi',
+                    'session_lifetime_placeholder' => 'Waktu Hidup Sesi',
                     'session_encrypt_label' => 'Enkripsi Sesi',
                     'session_encrypt_placeholder' => 'Enkripsi Sesi',
                     'session_path_label' => 'Path Sesi',
@@ -202,22 +203,22 @@ return [
                     'mail_password_placeholder' => 'Password Email',
                     'mail_encryption_label' => 'Enkripsi Email',
                     'mail_encryption_placeholder' => 'Enkripsi Email',
-                    'mail_from_address_label' => 'Alamat Pengirim Email',
-                    'mail_from_address_placeholder' => 'Alamat Pengirim Email',
-                    'mail_from_name_label' => 'Nama Pengirim Email',
-                    'mail_from_name_placeholder' => 'Nama Pengirim Email',
+                    'mail_from_address_label' => 'Alamat Pengirim',
+                    'mail_from_address_placeholder' => 'Alamat Pengirim',
+                    'mail_from_name_label' => 'Nama Pengirim',
+                    'mail_from_name_placeholder' => 'Nama Pengirim',
 
                     'aws_title' => 'AWS',
                     'aws_access_key_id_label' => 'AWS Access Key Id',
                     'aws_access_key_id_placeholder' => 'AWS Access Key Id',
                     'aws_secret_access_key_label' => 'AWS Secret Access Key',
                     'aws_secret_access_key_placeholder' => 'AWS Secret Access Key',
-                    'aws_default_region_label' => 'Wilayah Default AWS',
-                    'aws_default_region_placeholder' => 'Wilayah Default AWS',
-                    'aws_bucket_label' => 'Bucket AWS',
-                    'aws_bucket_placeholder' => 'Bucket AWS',
-                    'aws_use_path_style_endpoint_label' => 'Gunakan Path Style Endpoint AWS',
-                    'aws_use_path_style_endpoint_placeholder' => 'Gunakan Path Style Endpoint AWS',
+                    'aws_default_region_label' => 'AWS Default Region',
+                    'aws_default_region_placeholder' => 'AWS Default Region',
+                    'aws_bucket_label' => 'AWS Bucket',
+                    'aws_bucket_placeholder' => 'AWS Bucket',
+                    'aws_use_path_style_endpoint_label' => 'AWS Gunakan Path Style Endpoint',
+                    'aws_use_path_style_endpoint_placeholder' => 'AWS Gunakan Path Style Endpoint',
 
                     'pusher_title' => 'Pusher',
                     'pusher_app_id_label' => 'Pusher App Id',
@@ -232,101 +233,101 @@ return [
                     'pusher_port_placeholder' => 'Port Pusher',
                     'pusher_scheme_label' => 'Skema Pusher',
                     'pusher_scheme_placeholder' => 'Skema Pusher',
-                    'pusher_app_cluster_label' => 'Cluster Aplikasi Pusher',
-                    'pusher_app_cluster_placeholder' => 'Cluster Aplikasi Pusher',
+                    'pusher_app_cluster_label' => 'Cluster Pusher',
+                    'pusher_app_cluster_placeholder' => 'Cluster Pusher',
                 ],
                 'buttons' => [
-                    'setup_database' => 'Setel Basis Data',
-                    'setup_application' => 'Setel Aplikasi',
+                    'setup_database' => 'Atur Database',
+                    'setup_application' => 'Atur Aplikasi',
                     'install' => 'Pasang',
                 ],
             ],
         ],
         'classic' => [
-            'templateTitle' => 'Langkah 3 | Penyetelan Lingkungan | Classic Editor',
-            'title' => 'Classic Environment Editor',
+            'templateTitle' => 'Langkah 3 | Pengaturan Lingkungan | Editor Klasik',
+            'title' => 'Editor <code>.env</code> Klasik',
             'save' => 'Simpan .env',
             'back' => 'Gunakan Form Wizard',
             'install' => 'Simpan dan Pasang',
         ],
-        'success' => 'Berkas penyetelan .env Anda telah disimpan.',
-        'errors' => 'Tidak bisa menyimpan berkas .env. Silahkan buat secara manual.',
+        'success' => 'Pengaturan file .env Anda telah disimpan.',
+        'errors' => 'Tidak dapat menyimpan file .env, Silakan buat secara manual.',
     ],
 
     'install' => 'Pasang',
 
     /*
      *
-     * Installed Log translations.
+     * Terjemahan log pemasangan.
      *
      */
     'installed' => [
-        'success_log_message' => 'Laravel Installer berhasil DIPASANG pada tanggal: ',
+        'success_log_message' => 'Installer Aplikasi berhasil DIPASANG pada tanggal: ',
     ],
 
     /*
      *
-     * Final page translations.
+     * Terjemahan halaman akhir.
      *
      */
     'final' => [
         'title' => 'Instalasi Selesai',
         'templateTitle' => 'Instalasi Selesai',
-        'finished' => 'Aplikasi telah berhasil dipasang.',
-        'migration' => 'Keluaran Migration & Seed Console:',
-        'console' => 'Keluaran Application Console:',
-        'log' => 'Entri Log Aplikasi:',
-        'env' => 'Hasil akhir berkas .env:',
-        'exit' => 'Klik disini untuk keluar',
+        'finished' => 'Aplikasi berhasil dipasang.',
+        'migration' => 'Output Konsol Migrasi & Seed:',
+        'console' => 'Output Konsol Aplikasi:',
+        'log' => 'Catatan Log Instalasi:',
+        'env' => 'File .env Akhir:',
+        'exit' => 'Klik di sini untuk keluar',
     ],
 
     /*
      *
-     * Update specific translations
+     * Terjemahan khusus pembaruan
      *
      */
     'updater' => [
         /*
          *
-         * Shared translations.
+         * Terjemahan umum.
          *
          */
-        'title' => 'Laravel Updater',
+        'title' => 'Updater Aplikasi',
 
         /*
          *
-         * Welcome page translations for update feature.
+         * Halaman selamat datang untuk fitur update.
          *
          */
         'welcome' => [
-            'title'   => 'Selamat Datang di App Updater',
-            'message' => 'Selamat Datang di update wizard.',
+            'title' => 'Selamat Datang di Updater Aplikasi',
+            'message' => 'Selamat datang di panduan pembaruan.',
         ],
 
         /*
          *
-         * Welcome page translations for update feature.
+         * Halaman ringkasan update.
          *
          */
         'overview' => [
-            'title'   => 'Tinjauan',
+            'title' => 'Ringkasan',
             'message' => 'Ada 1 pembaruan.|Ada :number pembaruan.',
             'install_updates' => 'Pasang Pembaruan',
         ],
 
         /*
          *
-         * Final page translations.
+         * Halaman akhir update.
          *
          */
         'final' => [
             'title' => 'Selesai',
-            'finished' => 'Basis Data Aplikasi telah berhasil diperbarui.',
-            'exit' => 'Klik disini untuk keluar',
+            'finished' => 'Database aplikasi berhasil diperbarui.',
+            'exit' => 'Klik di sini untuk keluar',
         ],
 
         'log' => [
-            'success_message' => 'Laravel Installer berhasil DIPERBARUI pada ',
+            'success_message' => 'Installer Aplikasi berhasil DIPERBARUI pada ',
         ],
     ],
 ];

@@ -7,7 +7,7 @@ return [
      * Shared translations.
      *
      */
-    'title' => 'Laravel Installer',
+    'title' => 'Welcome to The Application Installer',
     'next' => 'Next Step',
     'back' => 'Previous',
     'finish' => 'Install',
@@ -22,7 +22,7 @@ return [
      */
     'welcome' => [
         'templateTitle' => 'Welcome',
-        'title'   => 'Laravel Installer',
+        'title'   => 'Welcome to The Application Installer',
         'message' => 'Easy Installation and Setup Wizard.',
         'next'    => 'Check Requirements',
     ],
@@ -262,7 +262,7 @@ return [
      *
      */
     'installed' => [
-        'success_log_message' => 'Laravel Installer successfully INSTALLED on date: ',
+        'success_log_message' => 'Application Installer successfully INSTALLED on date: ',
     ],
 
     /*
@@ -292,7 +292,7 @@ return [
          * Shared translations.
          *
          */
-        'title' => 'Laravel Updater',
+        'title' => 'Application Updater',
 
         /*
          *
@@ -300,7 +300,7 @@ return [
          *
          */
         'welcome' => [
-            'title'   => 'Welcome To The Updater',
+            'title'   => 'Welcome To The Application Updater',
             'message' => 'Welcome to the update wizard.',
         ],
 
@@ -327,7 +327,7 @@ return [
         ],
 
         'log' => [
-            'success_message' => 'Laravel Installer successfully UPDATED on ',
+            'success_message' => 'Application Installer successfully UPDATED on ',
         ],
     ],
 ];
