@@ -1,7 +1,8 @@
 # Laravel Web Installer | A Web Installer [Package](https://packagist.org/packages/aryokesuma/laravel-installer)
-[![Total Downloads](http://poser.pugx.org/aryokesuma/laravel-installer/downloads)](https://packagist.org/packages/aryokesuma/laravel-installer) 
 [![Latest Stable Version](http://poser.pugx.org/aryokesuma/laravel-installer/v)](https://packagist.org/packages/aryokesuma/laravel-installer) 
+[![Total Downloads](http://poser.pugx.org/aryokesuma/laravel-installer/downloads)](https://packagist.org/packages/aryokesuma/laravel-installer) 
 [![License](http://poser.pugx.org/aryokesuma/laravel-installer/license)](https://packagist.org/packages/aryokesuma/laravel-installer) 
+[![PHP Version Require](http://poser.pugx.org/aryokesuma/laravel-installer/require/php)](https://packagist.org/packages/aryokesuma/laravel-installer)
 
 - [Tentang](#tentang)
 - [Kebutuhan Sistem](#kebutuhan-sistem)
