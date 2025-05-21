@@ -61,6 +61,8 @@ Kamu harus mendaftarkan package ini secara manual di file `bootstrap/providers.p
 
 ```bash
 	php artisan vendor:publish --provider="AryoKesuma\LaravelInstaller\Providers\LaravelInstallerServiceProvider"
+```
+atau
 
 ```bash
     php artisan vendor:publish --tag=laravelinstaller
