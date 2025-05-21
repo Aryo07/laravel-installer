@@ -911,19 +911,6 @@
                             @endif
                         </div>
 
-                        <div class="form-group {{ $errors->has('mail_encryption') ? ' has-error ' : '' }}">
-                            <label
-                                for="mail_encryption">{{ __('installer_messages.environment.wizard.form.app_tabs.mail_encryption_label') }}</label>
-                            <input type="text" name="mail_encryption" id="mail_encryption" value="null"
-                                placeholder="{{ __('installer_messages.environment.wizard.form.app_tabs.mail_encryption_placeholder') }}" />
-                            @if ($errors->has('mail_encryption'))
-                                <span class="error-block">
-                                    <i class="fa fa-fw fa-exclamation-triangle" aria-hidden="true"></i>
-                                    {{ $errors->first('mail_encryption') }}
-                                </span>
-                            @endif
-                        </div>
-
                         <div class="form-group {{ $errors->has('mail_from_address') ? ' has-error ' : '' }}">
                             <label
                                 for="mail_from_address">{{ __('installer_messages.environment.wizard.form.app_tabs.mail_from_address_label') }}</label>

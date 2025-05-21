@@ -5,7 +5,7 @@
 @endsection
 
 @section('title')
-    <i class="fa fa-code fa-fw" aria-hidden="true"></i> {{ __('installer_messages.environment.classic.title') }}
+    <i class="fa fa-code fa-fw" aria-hidden="true"></i> {!! __('installer_messages.environment.classic.title') !!}
 @endsection
 
 @section('container')
