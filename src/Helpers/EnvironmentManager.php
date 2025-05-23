@@ -201,11 +201,12 @@ class EnvironmentManager
             $envFileData .= "BROADCAST_CONNECTION={$request->broadcast_connection}\n";
         }
         $envFileData .= "FILESYSTEM_DISK={$request->filesystem_disk}\n";
-        $envFileData .= "QUEUE_CONNECTION={$request->queue_connection}\n";
+        $envFileData .= "QUEUE_CONNECTION={$request->queue_connection}\n\n";
 
         if ($in(['9', '10'])) {
             $envFileData .= "CACHE_DRIVER={$request->cache_driver}\n\n";
         }
+
         if ($in(['11', '12'])) {
             $envFileData .= "CACHE_STORE={$request->cache_store}\n";
             $envFileData .= "CACHE_PREFIX={$request->cache_prefix}\n\n";

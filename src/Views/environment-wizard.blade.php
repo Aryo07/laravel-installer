@@ -814,7 +814,7 @@
                         @endif
 
                         {{-- QUEUE_CONNECTION=database --}}
-                        @if(in_array($laravelVersion, [11, 12]))`
+                        @if(in_array($laravelVersion, [11, 12]))
                             <div class="form-group {{ $errors->has('queue_connection') ? ' has-error ' : '' }}">
                                 <label
                                     for="queue_connection">{{ __('installer_messages.environment.wizard.form.app_tabs.queue_connection_label') }}
@@ -1143,7 +1143,7 @@
                             <div class="form-group {{ $errors->has('mail_from_address') ? ' has-error ' : '' }}">
                                 <label
                                     for="mail_from_address">{{ __('installer_messages.environment.wizard.form.app_tabs.mail_from_address_label') }}</label>
-                                <input type="text" name="mail_from_address" id="mail_from_address" value="{{ old('mail_from_address', 'null') }}"
+                                <input type="text" name="mail_from_address" id="mail_from_address" value="{{ old('mail_from_address', 'hello@example.com') }}"
                                     placeholder="{{ __('installer_messages.environment.wizard.form.app_tabs.mail_from_address_placeholder') }}" />
                                 @if ($errors->has('mail_from_address'))
                                     <span class="error-block">
