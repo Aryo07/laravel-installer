@@ -44,8 +44,9 @@ class EnvironmentController extends Controller
     public function environmentWizard()
     {
         $envConfig = $this->EnvironmentManager->getEnvContent();
+        $laravelVersion = $this->EnvironmentManager->getLaravelMajorVersion();
 
-        return view('vendor.installer.environment-wizard', compact('envConfig'));
+        return view('vendor.installer.environment-wizard', compact('envConfig', 'laravelVersion'));
     }
 
     /**
@@ -132,30 +133,43 @@ class EnvironmentController extends Controller
     private function checkDatabaseConnection(Request $request)
     {
         $connection = $request->input('database_connection');
-
         $settings = config("database.connections.$connection");
 
-        config([
-            'database' => [
-                'default' => $connection,
-                'connections' => [
-                    $connection => array_merge($settings, [
-                        'driver' => $connection,
-                        'host' => $request->input('database_hostname'),
-                        'port' => $request->input('database_port'),
-                        'database' => $request->input('database_name'),
-                        'username' => $request->input('database_username'),
-                        'password' => $request->input('database_password'),
-                    ]),
+        // Add sqlite check
+        if ($connection === 'sqlite') {
+            config([
+                'database' => [
+                    'default' => $connection,
+                    'connections' => [
+                        $connection => array_merge($settings, [
+                            'driver' => $connection,
+                            'database' => $request->input('database_name'),
+                        ]),
+                    ],
                 ],
-            ],
-        ]);
+            ]);
+        } else {
+            config([
+                'database' => [
+                    'default' => $connection,
+                    'connections' => [
+                        $connection => array_merge($settings, [
+                            'driver' => $connection,
+                            'host' => $request->input('database_hostname'),
+                            'port' => $request->input('database_port'),
+                            'database' => $request->input('database_name'),
+                            'username' => $request->input('database_username'),
+                            'password' => $request->input('database_password'),
+                        ]),
+                    ],
+                ],
+            ]);
+        }
 
         DB::purge();
 
         try {
             DB::connection()->getPdo();
-
             return true;
         } catch (Exception $e) {
             return false;
