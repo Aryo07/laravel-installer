@@ -13,18 +13,17 @@
 
 ## Tentang
 
-Ingin klien Anda bisa menginstal proyek Laravel semudah menginstal WordPress atau CMS lainnya?  
-Paket Laravel ini memungkinkan pengguna yang tidak terbiasa dengan Composer, SSH, dan sejenisnya untuk menginstal aplikasi Anda hanya dengan mengikuti panduan instalasi berbasis web.
+Pernah membayangkan proses instalasi Laravel semudah menginstal WordPress? Dengan paket ini, siapa pun—bahkan yang belum pernah pakai Composer atau SSH—bisa menginstal aplikasi Laravel lewat tampilan web yang simpel dan interaktif.
 
-Fitur-fitur yang tersedia saat ini:
+Apa saja yang bisa dilakukan?
 
-- Mengecek kebutuhan server secara otomatis.
-- Mengecek izin folder yang diperlukan.
-- Mengatur informasi database dengan mudah.
-	- Editor teks untuk file .env
-	- Wizard form untuk mengisi .env
-- Menjalankan migrasi database.
-- Menambahkan data awal (seeding) ke tabel.
+- Otomatis cek apakah server sudah memenuhi syarat.
+- Pastikan semua folder penting punya izin akses yang benar.
+- Setting database jadi gampang, bisa lewat editor .env langsung atau wizard form.
+- Jalankan migrasi database hanya dengan beberapa klik.
+- Tambahkan data awal ke tabel secara otomatis.
+
+Cocok banget buat developer yang ingin memudahkan klien atau pengguna akhir saat instalasi aplikasi Laravel.
 
 ## Kebutuhan Sistem
 
@@ -53,7 +52,7 @@ Kamu harus mendaftarkan package ini secara manual di file `config/app.php` pada 
 Kamu harus mendaftarkan package ini secara manual di file `bootstrap/providers.php`, seperti ini:
 
 ```php
-'providers' => [
+return [
 	AryoKesuma\LaravelInstaller\Providers\LaravelInstallerServiceProvider::class,
 ];
 ```
@@ -84,15 +83,15 @@ atau
 	* Untuk memperbarui aplikasi, buka route `/update` lalu ikuti petunjuk yang ada.
 	* Route `/update` akan menghitung jumlah file migrasi di folder `/database/migrations` dan membandingkannya dengan jumlah di tabel migrations. Jika jumlah file lebih banyak, halaman update akan muncul. Jika tidak, akan diarahkan ke halaman 404.
 
-* File dan folder tambahan yang dipublikasikan ke proyek Anda:
+* File dan folder tambahan yang dipublikasikan ke proyek kamu:
 
 |File|Keterangan|
 |:------------|:------------|
-|`config/installer.php`|Di sini Anda bisa mengatur kebutuhan sistem dan izin folder yang diperlukan agar aplikasi berjalan. Secara default, sudah diisi kebutuhan dasar aplikasi Laravel.|
-|`public/installer/assets`|Folder ini berisi folder css dan di dalamnya ada file `main.css` yang mengatur tampilan installer. Anda bisa mengubah atau menambahkan gaya sesuai keinginan.|
-|`resources/views/vendor/installer`|Folder ini berisi kode HTML untuk installer. Semuanya bisa Anda ubah sesuai kebutuhan.|
+|`config/installer.php`|Di sini kamu bisa mengatur kebutuhan sistem dan izin folder yang diperlukan agar aplikasi berjalan. Secara default, sudah diisi kebutuhan dasar aplikasi Laravel.|
+|`public/installer/assets`|Folder ini berisi folder css dan di dalamnya ada file `main.css` yang mengatur tampilan installer. Kamu bisa mengubah atau menambahkan gaya sesuai keinginan.|
+|`resources/views/vendor/installer`|Folder ini berisi kode HTML untuk installer. Semuanya bisa kamu ubah sesuai kebutuhan.|
 |`lang/en/installer_messages.php`<br>`lang/id/installer_messages.php`|File ini berisi semua pesan/teks installer (tersedia dalam bahasa Indonesia dan Inggris). Jika ingin menggunakan bahasa lain, salin file ini ke folder bahasa yang diinginkan lalu ubah isinya.|
-|`lang/en/validation.php`<br>`lang/id/validation.php`|File validasi bahasa Inggris, biasanya sudah ada di Laravel, namun jika ingin menyesuaikan pesan validasi installer, Anda bisa mengedit atau menambah di sini.|
+|`lang/en/validation.php`<br>`lang/id/validation.php`|File validasi bahasa Inggris, biasanya sudah ada di Laravel, namun jika ingin menyesuaikan pesan validasi installer, kamu bisa mengedit atau menambah di sini.|
 
 ## Foto Tampilan
 
