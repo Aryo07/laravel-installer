@@ -483,6 +483,13 @@
                 <div class="form-group {{ $errors->has('database_name') ? ' has-error ' : '' }}">
                     <label for="database_name">
                         {{ __('installer_messages.environment.wizard.form.db_name_label') }}
+                        <span id="sqlite_hint" style="color:red; font-weight: bold; display:none;">
+                            *<small>
+                                @if (in_array($laravelVersion, [9,10,11,12]))
+                                    {{ __('installer_messages.environment.wizard.form.db_info') }}
+                                @endif
+                            </small>
+                        </span>
                     </label>
                     <input type="text" name="database_name" id="database_name" value="{{ old('database_name') }}"
                         placeholder="{{ __('installer_messages.environment.wizard.form.db_name_placeholder') }}" />
@@ -1389,75 +1396,94 @@
 @endsection
 
 @section('scripts')
-    <script type="text/javascript">
-        function checkEnvironment(val) {
-            var element = document.getElementById('environment_text_input');
-            if (val == 'other') {
-                element.style.display = 'block';
-            } else {
-                element.style.display = 'none';
-            }
-
-            // Automatically set app_debug to false if production or testing
-            if (val == 'production') {
-                document.getElementById('app_debug_false').checked = true;
-                document.getElementById('app_debug_true').disabled = true;
-            } else if (val == 'testing') {
-                document.getElementById('app_debug_false').checked = true;
-                document.getElementById('app_debug_true').disabled = true;
-            } else {
-                document.getElementById('app_debug_true').checked = true;
-                document.getElementById('app_debug_true').disabled = false;
-            }
+<script type="text/javascript">
+    function checkEnvironment(val) {
+        var element = document.getElementById('environment_text_input');
+        if (val == 'other') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
         }
 
-        function showDatabaseSettings() {
-            document.getElementById('tab2').checked = true;
+        // Automatically set app_debug to false if production or testing
+        if (val == 'production') {
+            document.getElementById('app_debug_false').checked = true;
+            document.getElementById('app_debug_true').disabled = true;
+        } else if (val == 'testing') {
+            document.getElementById('app_debug_false').checked = true;
+            document.getElementById('app_debug_true').disabled = true;
+        } else {
+            document.getElementById('app_debug_true').checked = true;
+            document.getElementById('app_debug_true').disabled = false;
         }
+    }
 
-        function showApplicationSettings() {
-            document.getElementById('tab3').checked = true;
-        }
+    function showDatabaseSettings() {
+        document.getElementById('tab2').checked = true;
+    }
 
-        // Additional logic for database_connection sqlite
-        document.addEventListener('DOMContentLoaded', function () {
-        var dbSelect = document.getElementById('database_connection');
-        var dbHost = document.getElementById('database_hostname');
-        var dbPort = document.getElementById('database_port');
-        var dbUsername = document.getElementById('database_username');
-        var dbPassword = document.getElementById('database_password');
+    function showApplicationSettings() {
+        document.getElementById('tab3').checked = true;
+    }
 
-        function handleDbChange() {
-            if (dbSelect.value === 'sqlite') {
-                dbHost.value = '';
-                dbHost.disabled = true;
-                dbPort.value = '';
-                dbPort.disabled = true;
-                dbUsername.value = '';
-                dbUsername.disabled = true;
-                dbPassword.value = '';
-                dbPassword.disabled = true;
-            } else {
-                dbHost.disabled = false;
+    // Additional logic for database_connection sqlite
+    document.addEventListener('DOMContentLoaded', function () {
+    var dbSelect = document.getElementById('database_connection');
+    var dbHost = document.getElementById('database_hostname');
+    var dbPort = document.getElementById('database_port');
+    var dbUsername = document.getElementById('database_username');
+    var dbPassword = document.getElementById('database_password');
+
+    function handleDbChange() {
+        if (dbSelect.value === 'sqlite') {
+            dbHost.value = '';
+            dbHost.disabled = true;
+            dbPort.value = '';
+            dbPort.disabled = true;
+            dbUsername.value = '';
+            dbUsername.disabled = true;
+            dbPassword.value = '';
+            dbPassword.disabled = true;
+            document.getElementById('sqlite_hint').style.display = 'inline';
+        } else {
+            dbHost.disabled = false;
+            dbUsername.disabled = false;
+            dbPassword.disabled = false;
+            document.getElementById('sqlite_hint').style.display = 'none';
+
+            if (dbSelect.value === 'mysql') {
+                dbHost.value = '{{ old('database_hostname', '127.0.0.1') }}';
                 dbPort.disabled = false;
-                dbUsername.disabled = false;
-                dbPassword.disabled = false;
+                dbPort.value = 3306;
+                dbUsername.value = '{{ old('database_username', 'root') }}';
+            } else if (dbSelect.value === 'pgsql') {
+                dbHost.value = '{{ old('database_hostname', '127.0.0.1') }}';
+                dbPort.disabled = false;
+                dbPort.value = 5432;
+                dbUsername.value = '{{ old('database_username', 'root') }}';
+            } else if (dbSelect.value === 'sqlsrv') {
+                dbHost.value = '{{ old('database_hostname', '127.0.0.1') }}';
+                dbPort.disabled = false;
+                dbPort.value = 1433;
+                dbUsername.value = '{{ old('database_username', 'root') }}';
             }
+            dbPassword.value = '';
         }
+    }
 
-        dbSelect.addEventListener('change', handleDbChange);
+    dbSelect.addEventListener('change', handleDbChange);
         handleDbChange();
     });
 
     // Toggle maintenance inputs visibility
     function toggleMaintenanceInputs(selected) {
-    if (selected === 'driver') {
-        document.getElementById('driver_input').style.display = '';
-        document.getElementById('store_input').style.display = 'none';
-    } else {
-        document.getElementById('driver_input').style.display = 'none';
-        document.getElementById('store_input').style.display = '';
+        if (selected === 'driver') {
+            document.getElementById('driver_input').style.display = '';
+            document.getElementById('store_input').style.display = 'none';
+        } else {
+            document.getElementById('driver_input').style.display = 'none';
+            document.getElementById('store_input').style.display = '';
+        }
     }
-}
-    </script>
+</script>
 @endsection

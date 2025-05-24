@@ -103,6 +103,7 @@ return [
                 'db_name_placeholder' => 'Nama Database',
                 'db_username_label' => 'Username Database',
                 'db_username_placeholder' => 'Username Database',
+                'db_info' => 'Untuk SQLite, masukkan path lengkap ke nama database. Contoh: /var/www/html/database.sqlite',
                 'db_password_label' => 'Password Database',
                 'db_password_placeholder' => 'Password Database',
                 'app_timezone_label' => 'Zona Waktu Aplikasi',

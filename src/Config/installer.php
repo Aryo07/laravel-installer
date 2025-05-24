@@ -104,27 +104,29 @@ return [
 
                 'log_channel' => 'required|string|max:50',
                 'log_stack' => 'nullable|string|max:50',
-                'log_deprecations_channel' => 'nullable|string|max:50',
+                'log_deprecations_channel' => 'required|string|max:50',
                 'log_level' => 'required|string|max:50',
 
                 'database_connection' => 'required|string|max:50',
                 'database_hostname' => 'required_if:database_connection,mysql,pgsql,sqlsrv|string|max:50',
                 'database_port' => 'required_if:database_connection,mysql,pgsql,sqlsrv|nullable|numeric',
-                'database_name' => 'required|string|max:255',
+                'database_name' => 'required_if:database_connection,mysql,sqlite,pgsql,sqlsrv|string|max:50',
                 'database_username' => 'required_if:database_connection,mysql,pgsql,sqlsrv|max:50',
                 'database_password' => 'required_if:database_connection,mysql,pgsql,sqlsrv|string|max:50',
 
                 'session_driver' => 'required|string|max:50',
                 'session_lifetime' => 'required|numeric',
-                'broadcast_driver' => 'nullable|string|max:50',
-                'cache_driver' => 'nullable|string|max:50',
                 'session_encrypt' => 'nullable|string|max:50',
                 'session_path' => 'nullable|string|max:50',
                 'session_domain' => 'nullable|string|max:50',
 
+                'broadcast_driver' => 'nullable|string|max:50',
                 'broadcast_connection' => 'nullable|string|max:50',
                 'filesystem_disk' => 'required|string|max:50',
                 'queue_connection' => 'required|string|max:50',
+
+                'cache_driver' => 'nullable|string|max:50',
+
                 'cache_store' => 'nullable|string|max:50',
                 'cache_prefix' => 'nullable|string|max:50',
 

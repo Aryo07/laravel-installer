@@ -22,9 +22,9 @@ return [
      */
     'welcome' => [
         'templateTitle' => 'Welcome',
-        'title'   => 'Welcome to The Application Installer',
+        'title' => 'Welcome to The Application Installer',
         'message' => 'Easy Installation and Setup Wizard.',
-        'next'    => 'Check Requirements',
+        'next' => 'Check Requirements',
     ],
 
     /*
@@ -35,7 +35,7 @@ return [
     'requirements' => [
         'templateTitle' => 'Step 1 | Server Requirements',
         'title' => 'Server Requirements',
-        'next'    => 'Check Permissions',
+        'next' => 'Check Permissions',
     ],
 
     /*
@@ -103,6 +103,7 @@ return [
                 'db_name_placeholder' => 'Database Name',
                 'db_username_label' => 'Database User Name',
                 'db_username_placeholder' => 'Database User Name',
+                'db_info' => 'For SQLite, enter the full path to the database name. Example: /var/www/html/database.sqlite',
                 'db_password_label' => 'Database Password',
                 'db_password_placeholder' => 'Database Password',
                 'app_timezone_label' => 'App Timezone',
@@ -306,7 +307,7 @@ return [
          *
          */
         'welcome' => [
-            'title'   => 'Welcome To The Application Updater',
+            'title' => 'Welcome To The Application Updater',
             'message' => 'Welcome to the update wizard.',
         ],
 
@@ -316,7 +317,7 @@ return [
          *
          */
         'overview' => [
-            'title'   => 'Overview',
+            'title' => 'Overview',
             'message' => 'There is 1 update.|There are :number updates.',
             'install_updates' => 'Install Updates',
         ],
